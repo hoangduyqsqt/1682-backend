@@ -21,9 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: [
         'http://1682-frontend.vercel.app',
-        'http://1682-backend.vercel.app',
-        'http://localhost:5173',
-        'http://localhost:5174'
+        
     ],
     credentials: true
 }));
