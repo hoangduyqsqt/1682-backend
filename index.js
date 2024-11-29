@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: [
         'https://1682-frontend-oj90qcfc5-hoangduyqsqts-projects.vercel.app',
-        'http://localhost:5001',
+        
         'http://localhost:5173',
         'http://localhost:5174'
     ],
@@ -69,7 +69,7 @@ app.post('/api/momo/pay', isAuthenticated, async (req, res) => {
     const secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
     const partnerCode = 'MOMO';
     const redirectUrl = 'http://localhost:5173/success';
-    const ipnUrl = 'http://localhost:5001/api/orders/confirm-payment';
+    const ipnUrl = 'http://1682-backend.vercel.app/api/orders/confirm-payment';
     const requestType = "payWithMethod";
     const orderId = partnerCode + new Date().getTime();
     const requestId = orderId;

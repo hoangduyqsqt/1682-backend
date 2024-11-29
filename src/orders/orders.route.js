@@ -7,7 +7,7 @@ import verifyAdmin from '../middleware/verifyAdmin.js';
 const router = express.Router();
 
 
-// create checkout session
+
 
 
 //  confirm payment
