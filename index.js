@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: [
-
+        'https://one682-frontend.onrender.com',
         'http://localhost:5001',
         'http://localhost:5173',
         'http://localhost:5174'
@@ -132,7 +132,7 @@ app.post('/api/momo/pay', isAuthenticated, async (req, res) => {
                     products: products,
                     amount: amount,
                     email: email,
-                    
+
                     address: address,
                 });
 
@@ -167,11 +167,11 @@ app.post('/api/momo/pay', isAuthenticated, async (req, res) => {
 
 
 
-    app.post("/uploadImage", (req, res) => {
-        uploadImage(req.body.image)
-            .then((url) => res.send(url))
-            .catch((err) => res.status(500).send(err));
-    });
+app.post("/uploadImage", (req, res) => {
+    uploadImage(req.body.image)
+        .then((url) => res.send(url))
+        .catch((err) => res.status(500).send(err));
+});
 
 
 async function main() {
@@ -186,7 +186,7 @@ main()
     .then(() => console.log("mongodb is successfully connected."))
     .catch((err) => console.log(err));
 
-    
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
