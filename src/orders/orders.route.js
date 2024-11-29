@@ -7,7 +7,7 @@ import verifyAdmin from '../middleware/verifyAdmin.js';
 const router = express.Router();
 
 
-
+// create checkout session
 
 
 //  confirm payment
@@ -20,7 +20,7 @@ router.get("/confirm-payment", async (req, res) => {
     if (order) {
         order.status = "processing";
         await order.save();
-        res.redirect(`http://1682-backend.vercel.app`);
+        res.redirect(`http://1682-frontend.vercel.app`);
     } else {
         console.error("Order not found");
     }
