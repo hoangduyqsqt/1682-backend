@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: [
-
+        'https://1682-frontend-oj90qcfc5-hoangduyqsqts-projects.vercel.app',
         'http://localhost:5001',
         'http://localhost:5173',
         'http://localhost:5174'
