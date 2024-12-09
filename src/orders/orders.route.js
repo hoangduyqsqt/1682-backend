@@ -20,7 +20,7 @@ router.get("/confirm-payment", async (req, res) => {
     if (order) {
         order.status = "processing";
         await order.save();
-        res.redirect(`https://1682-frontend.vercel.app`);
+        res.redirect(`https://one682-backend.onrender.com`);
     } else {
         console.error("Order not found");
     }
