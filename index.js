@@ -23,7 +23,8 @@ app.use(cors({
         'https://1682-frontend.vercel.app',
         'http://localhost:5001',
         'http://localhost:5173',
-        'http://localhost:5174'
+        'http://localhost:5174',
+        'https://one682-backend.onrender.com'
     ],
     credentials: true
 }));
@@ -68,7 +69,7 @@ app.post('/api/momo/pay', isAuthenticated, async (req, res) => {
     const accessKey = 'F8BBA842ECF85';
     const secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
     const partnerCode = 'MOMO';
-    const redirectUrl = 'http://1682-frontend.vercel.app';
+    const redirectUrl = 'https://one682-backend.onrender.com/api/orders/confirm-payment';
     const ipnUrl = 'https://one682-backend.onrender.com/api/orders/confirm-payment';
     const requestType = "payWithMethod";
     const orderId = partnerCode + new Date().getTime();
