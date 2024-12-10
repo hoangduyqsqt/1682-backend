@@ -44,7 +44,7 @@ router.get('/', async (req, res) => {
       minPrice,
       maxPrice,
       page = 1,
-      limit = 10,
+      limit = 100,
     } = req.query;
 
     const filter = {};
